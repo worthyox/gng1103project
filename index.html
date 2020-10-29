@@ -1,0 +1,101 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/menu.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="overlay">
+                <p class="screen">WELCOME</p>
+                <div class="intro">
+                    <button class="myBtn" onclick="fadeOut()">EXPLORE JAMZ</button>
+                </div>
+            </div>
+
+            <!-- <div class="overlay-2"></div> -->
+
+            <div class="content">
+                <nav>
+                        <!-- <div class="menu-wrap">
+                                <input type="checkbox" class="toggler">
+                                <div class="hamburger"></div>
+                            </div>
+                            <div class="menu">
+                                <div>
+                                    <div>
+                                        <ul>
+                                            <li><a href="#">SIGN IN</a></li>
+                                            <li><a href="#">BARCODE</a></li>
+                                            <li><a href="#">PROGRESS</a></li>
+                                            <li><a href="#">ORDERS</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    <div class = "logo">
+                        <h3>Jamz Delivery</h3>
+                    </div>
+                        <ul class="nav-links">
+                            <li><a href="#" class="active">HOME</a></li>
+                            <li><a href="#">FOOD DELIVERY</a></li>
+                            <li><a href="#">OTHER DELIVERY</a></li>
+                            <li><a href="#">ABOUT US</a></li>
+                        </ul>
+                    <!-- <div class="burger">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div> -->
+                </nav>
+                <script src="index.js"></script>
+                <!-- <div class="menu-wrap">
+                    <input type="checkbox" class="toggler">
+                    <div class="hamburger"></div>
+                </div>
+                <div class="menu">
+                    <div>
+                        <div>
+                            <ul>
+                                <li><a href="#">SIGN IN</a></li>
+                                <li><a href="#">BARCODE</a></li>
+                                <li><a href="#">PROGRESS</a></li>
+                                <li><a href="#">ORDERS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <script>
+            function fadeOut(){
+                TweenMax.to(".myBtn",1,{
+                    y:-100,
+                    opacity:0
+                });
+
+                TweenMax.to(".screen",2,{
+                    y:-400,
+                    opacity:0,
+                    ease: Power2.easeInOut,
+                    delay:1
+                });
+                TweenMax.to(".overlay",2,{
+                    delay:1.5,
+                    top:"-110%",
+                    ease:Expo.easeInOut
+                });
+            }
+        </script>
+        <header class="showcase">
+            <h1>Welcome to Jamz Delivery</h1>
+            <p>please put your content here, here should be a introduction for Jamz delivery</p>
+            <a href="#" class="btn">Read More</a>
+        </header>
+    </body>
+</html>
