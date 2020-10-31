@@ -1,9 +1,8 @@
 <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/user.css">
-      <link rel="stylesheet" href="css/menu.css">
       <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/menu.css">
       <script src="https://kit.fontawesome.com/c4a00654b9.js" crossorigin="anonymous"></script>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
       <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -23,41 +22,37 @@
                     <div class = "logo">
                         <h3>Jamz Delivery</h3>
                     </div>
-                    <div class="space"></div>
-                    <div class="space"></div>
-                    <div class="space"></div>
-                    <div class="Address">
-                        <h2>Address</h2>
-                        <p>123 This St.</p>
-                    </div>
-                    <div class="time">
-                        <h2>When?</h2>
-                        <div class="dropdown">
-                        <button>ASAP</button>
-                        <ul>
-                            <li><a href="#">ASAP</a></li>
-                            <li><a href="#">Scheduled</a></li>
-                        </ul>
-                        </div>
-                    </div>
-                    <div class="user">
-                        <h2>Hi! User</h2>
-                        <div class="dropdown">
-                                <button>Account</button>
-                                <ul>
-                                    <li><a href="#">PROFILE</a></li>
-                                    <li><a href="#">ORDERS</a></li>
-                                </ul>
-                                </div>
+                    <div class="login">
+                        <a href="login.html">Log in</a>
                     </div>
                 </nav>
         </div>
+        <script>
+            function fadeOut(){
+                TweenMax.to(".myBtn",1,{
+                    y:-100,
+                    opacity:0
+                });
+
+                TweenMax.to(".screen",2,{
+                    y:-400,
+                    opacity:0,
+                    ease: Power2.easeInOut,
+                    delay:1
+                });
+                TweenMax.to(".overlay",2,{
+                    delay:1.5,
+                    top:"-100%",
+                    ease:Expo.easeInOut
+                });
+            }
+        </script>
         <div class="slidenav">
             <ul class="nav-links">
                 <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#">ORDERS</a></li>
-                <li><a href="#">BARCODE</a></li>
                 <li><a href="#">PROGRESS</a></li>
+                <li><a href="#">BARCODE</a></li>
+                <li><a href="#">ORDERS</a></li>
                 <li><a href="aboutus.html">ABOUT US</a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>

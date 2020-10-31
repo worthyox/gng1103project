@@ -225,6 +225,8 @@ nav{
 .burger{
     display: block;
 }
+
+
 .burger div{
     width:25px;
     height:3px;
