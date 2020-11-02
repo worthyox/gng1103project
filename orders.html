@@ -1,45 +1,11 @@
 <html>
-
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
-
-/* Style the top navigation */
-.topnav {
-  background-color: white;
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: none;
-  color: white;
-}
-
-.topnav-right  {
-  float: right;
-}
 
 /* Style the tab link bar */
 .tablink {
@@ -51,7 +17,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
   cursor: pointer;
   padding: 10px 15px;
   font-size: 100%;
-  width: 33.33%;
+  width: 50%;
 }
 
 /* Change the color of links on hover */
@@ -72,16 +38,36 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
 
 <body>
 
-<div class="topnav">
-	<div class="topnav-left">
-    	<a href="index.html">HOME</a>
-    	<a a:hover="background-color:none;">JAMZ DELIVERY</a>
-  	</div>
-	<div class="topnav-right">
-  		<a>English</a>
-  		<a>Account</a>
-  	</div>
-</div>
+<div class="container">
+            <div class="content">
+                <nav>
+                    <div class="burger">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                            </div>
+                    <div class = "logo">
+                        <h3>Jamz Delivery</h3>
+                    </div>
+                   <div class="login">
+                        <h3></h3>
+                    </div> 
+                </nav>
+        </div>
+        
+        <div class="slidenav">
+            <ul class="nav-links">
+                <li><a href="#" class="active">HOME</a></li>
+                <li><a href="#">PROGRESS</a></li>
+                <li><a href="#">BARCODE</a></li>
+                <li><a href="#">ORDERS</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <script src="index.js"></script>
+
 
 
 <div style = "margin-top: 64px; overflow: auto;" id="order">
@@ -89,12 +75,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
  		<h2 style="padding:20px; text-align:center;">MY ORDERS</h2>
     </header>
  	<button class="tablink" onclick="openOrder('ACTIVE')" id="defaultOpen">ACTIVE</button>
- 	<button class="tablink" onclick="openOrder('FAVORITE')">FAVORITE</button>
  	<button class="tablink" onclick="openOrder('RECENT')">RECENT</button>
 </div>
 
-<div style="position:fixed; bottom: 0px; left:0px; right:0px; background-color: white;" id="about">
+<div style="position:fixed; bottom: 0px; left:0px; right:0px; background-color: white;" id="about"></div>
 </div>
-
 </body>
 </html>
