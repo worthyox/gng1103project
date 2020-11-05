@@ -62,7 +62,7 @@
         <div class="slidenav">
             <ul class="nav-links">
                 <li><a href="user.html" class="active">HOME</a></li>
-                <li><a href="#">BARCODE</a></li>
+                <li><a href="#" onclick="toggle()">BARCODE</a></li>
                 <li><a href="orders.html">ORDERS</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="aboutus.html">ABOUT US</a></li>
@@ -84,5 +84,19 @@
                     </tr>
                 </table>
             </div>
+        </div>
+        <div id="popup">
+            <h2>BARCODE</h2>
+            <img src="image/castlegrey.jpg" style="width: 250px;">
+            <a href="#" onclick="toggle()">Close</a>
+        </div>
+            <script>
+                function toggle() {
+                    var blur = document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup = document.getElementById('popup');
+                    popup.classList.toggle('active');
+                }
+                </script>
     </body>
 </html>
