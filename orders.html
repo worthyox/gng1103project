@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <style>
-body,h1,h3,h4,h5,h6 {font-family: Arial, sans-serif}
+/* body,h1,h3,h4,h5,h6 {font-family: Arial, sans-serif} */
 
 h2 {
   background: rgba(150, 150, 150, 0.7);
@@ -59,7 +59,7 @@ h2 {
 
 <body>
 
-<div class="container">
+<div class="container" id="blur">
             <div class="content">
                 <nav>
                     <div class="burger">
@@ -77,32 +77,31 @@ h2 {
         </div>
         
         <div class="slidenav">
-            <ul class="nav-links">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#">PROGRESS</a></li>
-                <li><a href="#">BARCODE</a></li>
-                <li><a href="#">ORDERS</a></li>
-                <li><a href="aboutus.html">ABOUT US</a></li>
-                <li><a href="#"></a></li>
-                <li><a href="#"></a></li>
-            </ul>
+          <ul class="nav-links">
+              <li><a href="home.html">HOME</a></li>
+              <li><a href="orders.html" class="active">ORDERS</a></li>
+              <li><a href="#">PROGRESS</a></li>
+              <li><a href="#" onclick="toggle()">BARCODE</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">ABOUT US</a></li>
+              <li><a href="#"></a></li>
+          </ul>
         </div>
         <script src="index.js"></script>
-
 
 <!-- My Orders Container -->
 
 
-<div style="margin-top:64px; overflow:auto; margin:0% 15% 0% 15%;" id="order">
+<div style="margin-top:64px; overflow:auto; margin:0% 20% 0% 20%;" id="order">
 <header style="padding:20px;"></header>
 <h2>MY ORDERS</h2> 
 <button class="tablink" onclick="openOrder('ACTIVE', this, 'grey')" id="defaultOpen">ACTIVE</button>
 <button class="tablink" onclick="openOrder('RECENT', this, 'grey')">RECENT</button>
 </div>
 
-<div style="overflow:auto; border:2px solid black; margin:0% 15% 0% 15%;" id="ordermenu">
+<div style="overflow:auto; border:2px solid black; margin:0% 20% 0% 20%;" id="ordermenu">
 <div id="ACTIVE" class="tabcontent">
-  <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <h3 style="text-align:left;">store Name<span style="float: right;">store address</span></h3>
   <p style="text-align:right;">phone #</p>
   <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Ordered @ -:-- PM</span></p>
   <p style="text-align: right;">Arrives @ -:-- PM</p>
@@ -145,8 +144,22 @@ function openOrder(myorder,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 //
-
 </script>
 </div>
+</div>
+<!--add bar code-->
+<div id="popup">
+  <h2>BARCODE</h2>
+  <img src="image/castlegrey.jpg" style="width: 250px;">
+  <a href="#" onclick="toggle()">Close</a>
+</div>
+  <script>
+      function toggle() {
+          var blur = document.getElementById('blur');
+          blur.classList.toggle('active');
+          var popup = document.getElementById('popup');
+          popup.classList.toggle('active');
+      }
+      </script>
 </body>
 </html>
