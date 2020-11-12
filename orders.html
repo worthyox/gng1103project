@@ -91,17 +91,16 @@ h2 {
 
 <!-- My Orders Container -->
 
-
-<div style="margin-top:64px; overflow:auto; margin:0% 20% 0% 20%;" id="order">
+<div style="margin-top:64px; overflow:auto; margin:0% 15% 0% 15%;" id="order">
 <header style="padding:20px;"></header>
 <h2>MY ORDERS</h2> 
 <button class="tablink" onclick="openOrder('ACTIVE', this, 'grey')" id="defaultOpen">ACTIVE</button>
 <button class="tablink" onclick="openOrder('RECENT', this, 'grey')">RECENT</button>
 </div>
 
-<div style="overflow:auto; border:2px solid black; margin:0% 20% 0% 20%;" id="ordermenu">
+<div style="overflow:auto; border:2px solid black; margin:0% 15% 0% 15%;" id="ordermenu">
 <div id="ACTIVE" class="tabcontent">
-  <h3 style="text-align:left;">store Name<span style="float: right;">store address</span></h3>
+  <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
   <p style="text-align:right;">phone #</p>
   <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Ordered @ -:-- PM</span></p>
   <p style="text-align: right;">Arrives @ -:-- PM</p>
@@ -122,6 +121,72 @@ h2 {
   <button class="material-icons" style="float:right;" onclick="openDetailOrder('ACTIVEINFO', this, 'none')">arrow_forward</button>
   <br><br><hr>
 </div>
+
+
+<div id="RECENT" class="tabcontent">
+ <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <p style="text-align:right;">phone #</p>
+  <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Order Date: yymmdd</span></p>
+  <button class="material-icons" style="float:right;" onclick="openDetailOrder('ACTIVEINFO', this, 'none')">arrow_forward</button>
+  <br><br><hr>
+ <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <p style="text-align:right;">phone #</p>
+  <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Order Date: yymmdd</span></p>
+  <button class="material-icons" style="float:right;" onclick="openDetailOrder('ACTIVEINFO', this, 'none')">arrow_forward</button>
+  <br><br><hr>
+ <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <p style="text-align:right;">phone #</p>
+  <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Order Date: yymmdd</span></p>
+ <button class="material-icons" style="float:right;" onclick="openDetailOrder('RECENTINFO', this, 'none')">arrow_forward</button>
+   <br><br><hr>
+ <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <p style="text-align:right;">phone #</p>
+  <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Order Date: yymmdd</span></p>
+ <button class="material-icons" style="float:right;" onclick="openDetailOrder('RECENTINFO', this, 'none')">arrow_forward</button>
+   <br><br><hr>
+ <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <p style="text-align:right;">phone #</p>
+  <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Order Date: yymmdd</span></p>
+ <button class="material-icons" style="float:right;" onclick="openDetailOrder('RECENTINFO', this, 'none')">arrow_forward</button>
+  <br><br><hr>
+ <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <p style="text-align:right;">phone #</p>
+  <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Order Date: yymmdd</span></p>
+ <button class="material-icons" style="float:right;" onclick="openDetailOrder('RECENTINFO', this, 'none')">arrow_forward</button>
+  <br><br><hr>
+ <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
+  <p style="text-align:right;">phone #</p>
+  <p style="text-align:left;">order id #<span style="display: inline-block; float: right;">Order Date: yymmdd</span></p>
+ <button class="material-icons" style="float:right;" onclick="openDetailOrder('RECENTINFO', this, 'none')">arrow_forward</button>
+   <br><br><hr>
+</div>
+
+<div id="ACTIVEINFO" class="tabcontent">
+ <h3>Order Items</h3>
+ <!--<button class="moreinfolink">back ></button>-->
+ <br><hr>
+ <h3>Order Items</h3>
+ <!--<button class="moreinfolink">back ></button>-->
+ <br><hr>
+</div>
+
+
+<div id="RECENTINFO" class="tabcontent tabcontentR">
+ <h3>Order Items</h3>
+ <!--<button class="moreinfolink">back ></button>-->
+ <br><hr>
+ <h3>Order Items</h3>
+ <!--<button class="moreinfolink">back ></button>-->
+ <br><hr>
+</div>
+
+</div>
+
+
+<!-- <div style="position:fixed; bottom: 0px; left:0px; right:0px; background-color: white;"id="about">
+<h3 style="margin-bottom:10px; text-align:center;">ABOUT US</h3>
+<p style="background-color: white; text-align:center; padding-left:10px; padding-right:10px;">JAMZ DELIVERY is a drone delivery solution developed by uOttawa Mechanical Engineering Students. Find us at some address at some place or call us at 05050515-122330</p>
+</div> -->
 
 
 <script>
@@ -137,6 +202,11 @@ function openOrder(myorder,elmnt,color) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].style.backgroundColor = "";
  }
+ // Get all elements with class="moreinfocontent" and hide them
+  moreinfocontent = document.getElementsByClassName("moreinfocontent");
+  for (i = 0; i < moreinfocontent.length; i++) {
+    moreinfocontent[i].style.display = "none";
+  }
   // Show the current tab, and change display and color
   document.getElementById(myorder).style.display = "block";
   elmnt.style.backgroundColor = color;
@@ -144,6 +214,31 @@ function openOrder(myorder,elmnt,color) {
 // Get the element with id="defaultOpen" and click on it
   document.getElementById("defaultOpen").click();
 //
+//
+  function openDetailOrder(myorder,elmnt,color) {
+  var i, tabcontent, moreinfocontent, moreinfocontentR, moreinfolink;
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  // Get all elements with class="moreinfocontent" and hide them
+  moreinfocontent = document.getElementsByClassName("moreinfocontent");
+  for (i = 0; i < moreinfocontent.length; i++) {
+    moreinfocontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="moreinfocontent" and hide them
+  moreinfocontentR = document.getElementsByClassName("moreinfocontentR");
+  for (i = 0; i < moreinfocontentR.length; i++) {
+    moreinfocontentR[i].style.display = "none";
+  }
+  
+  // Show the current moreinfo, and change display and color
+  document.getElementById(myorder).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
 </script>
 </div>
 </div>
