@@ -68,7 +68,9 @@ body{
     line-height:30px;
     width: 300px;
 }
-
+.cart i{
+    color: azure;
+}
 .overlay{
     z-index: 2;
     position: absolute;
