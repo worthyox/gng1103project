@@ -234,12 +234,6 @@ nav{
     }
 }
 
-/* .nav-links{
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-} */
-
 .nav-links a{
     color:#2c3e50;
     text-decoration: none;

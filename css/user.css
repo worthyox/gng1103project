@@ -1,5 +1,17 @@
-.user button{
-    color: var(--logo-color);
+.time select{
+    color: #333333;
+    font-family: Poppins;
+    padding:8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #dddddd
+
+}
+
+.select:focus,
+.select:hover{
+    outline: none;
+    border: 1px solid #bbbbbb;
 }
 p, h2{
     color: var(--logo-color);
@@ -7,42 +19,30 @@ p, h2{
     margin-bottom: 0;
     
 }
-.dropdown{
-    display: block;
-    font-size: 15px;
-    height:10vh;
-    justify-content: space-around;
-    align-items:center;
-    margin: auto;
-}
 
-.address h2{
-    margin-bottom: 0;
-}
-.address p{
-    margin-top: 2px;
-}
 
-.time, .user{
+
+.time{
+    display: flex;
     position: relative;
     align-items: center;
 }
 
-.time h2, .user h2{
+.time h2{
     margin-top: 92px; 
     margin-bottom: 0px;
 }
 
-.time ul, .user ul{
+.time ul{
     margin: 0;
     padding-left:0;
     position: absolute;
     /* bottom:0px; */
-    left: -10px;
+    left: -50px;
     list-style: none;
     background: var(--new-color);
     height: 75px;
-    width: 100px;
+    width: 250px;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -55,43 +55,17 @@ p, h2{
     transition: all 0.4s ease;
 }
 
-.time a, .user a{
+.time a{
     color: var(--logo-color);
     text-decoration: none;
 }
 
-.time li, .user li{
+.time li{
     width:100%;
     height:100%;
     display: flex;
     justify-content: center;
     align-items:center;
 }
-.time li:hover,
-.user li:hover{
-    background-color: #fff;
-    border-radius: 5px;
-}
 
-
-.dropdown button{
-    background: none;
-    border: none;
-    color: var(--logo-color);
-    font-size: 15px;
-    cursor: pointer;
-    margin-top: 2px;
-    letter-spacing: 2px;
-}
-
-.dropdown button:hover{
-    color: var(--new-color);
-}
-
-.time button:focus + ul,
-.user button:focus + ul{
-    opacity: 1;
-    pointer-events: all;
-    transform: translateY(0);
-}
 
