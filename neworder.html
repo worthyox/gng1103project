@@ -42,7 +42,7 @@
           overflow: auto;
           background: rgba(100, 100, 100, 0.7);
           width: 90%;
-          height: 65%;
+          height: 60%;
         }
         
         
@@ -107,14 +107,14 @@
             </ul>
         </div>
         <script src="index.js"></script>
-        <div style="margin-top:64px; overflow:auto; margin:0% 20% 0% 20%;" id="order">
+        <div style="margin-top:64px; overflow:auto; margin:2% 20% 1% 20%;" id="order">
             <header style="padding:8px;"></header>
-            <h2>MY ORDERS</h2> 
+            <h2 style="text-align:center; margin:0% 0% 1% 0%">MY ORDERS</h2> 
             <button class="tablink" onclick="openOrder('ACTIVE', this, 'grey')" id="defaultOpen">ACTIVE</button>
             <button class="tablink" onclick="openOrder('RECENT', this, 'grey')">RECENT</button>
             </div>
             
-            <div style="overflow:auto; border:2px solid black; margin:0% 20% 0% 20%;" id="ordermenu">
+            <div style="overflow:auto; border:2px; margin:0% 20% 0% 20%;" id="ordermenu">
             <div id="ACTIVE" class="tabcontent">
               <h3 style="text-align:left;">store Name<span style="display: inline-block; float: right;">store address</span></h3>
               <p style="text-align:right;">phone #</p>
