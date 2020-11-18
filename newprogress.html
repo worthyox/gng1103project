@@ -1,0 +1,315 @@
+<html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="css/user.css">
+      <link rel="stylesheet" href="css/menu.css">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://kit.fontawesome.com/c4a00654b9.js" crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Track Progress</title>
+
+      <style>
+
+       /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+       #map {
+        margin: 0px 12% 0px 12%;
+        width: 75%;
+        height: 75%;
+      }
+        /* body,h1,h3,h4,h5,h6 {font-family: Arial, sans-serif} */
+
+         .dropdown {
+        position: relative;
+        display: inline-block;
+        }
+
+        .dropdown-content {
+        display: none;
+        position: absolute;
+        overflow: auto;
+        z-index: 1;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        }
+
+        .dropdown-content a {
+        color: green;
+        padding: 1px 10px 1px 10px;
+        display: block;
+        }
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropbtn {
+        border: none;
+        cursor: pointer;
+        }
+
+        .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: DodgerBlue;
+        }
+        .flex-container > div {
+        background-color: #f1f1f1;
+        width: 25%;
+        height: 25%;
+        margin: 10px;
+        text-align: center;
+        line-height: 15px;
+        font-size: 10px;
+        overflow: auto;
+        }
+
+        
+        /* Style the tab link bar */
+        .tablink {
+          background: rgba(150, 150, 150, 0.7);
+          color: black;
+          float: left;
+          margin: 0% 0% 0% 0%;
+          border: 10px grey;
+          cursor: pointer;
+          padding: 10px 15px;
+          font-size: 100%;
+          width: 20%;
+        }
+        
+        /* Change the color of links on hover */
+        .tablink:hover {
+          background-color: grey;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          margin: 0% 0% 0% 0%;
+          padding: 2% 5% 10% 5%;
+          text-align: center;
+          overflow: auto;
+          background: rgba(100, 100, 100, 0.7);
+          width: 90%;
+          height: 60%;
+        }
+        
+        
+        #ACTIVE {background-color:none;}
+        #FAVORITE {background-color:none;}
+        #RECENT {background-color:none;}
+        
+        </style>
+    </head>
+    <body>
+        <div class="container" id="blur">
+            <div class="content">
+                <nav>
+                    <div class="burger">
+                                <div class="line1"></div>
+                                <div class="line2"></div>
+                                <div class="line3"></div>
+                            </div>
+                    <div class = "logo">
+                        
+                        <h3><i class="fa fa-cutlery" aria-hidden="true"></i>Jamz Delivery</h3>
+                    </div>
+                  
+                
+                
+                    <div class = "Cart">
+                        <a href="newcart.html" class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> </a>
+                    </div>
+                    <div class = "logo2">
+                        <h3>Welcome Jack! <i class="fa fa-user-circle" aria-hidden="true"></i></h3>
+                    </div>
+                        <div class="burger2">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
+                </nav>
+        </div>
+        <div class="slidenav">
+            <ul class="nav-links">
+                <li><a href="user.html" class="active">HOME</a></li>
+                <li><a href="neworder.html">ORDERS</a></li>
+                <li><a href="newprogress.html">PROGRESS</a>
+                <li><a href="#" onclick="toggle()">BARCODE</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#"></a></li>
+                <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="slidenav2">
+            <ul class="nav-links2">
+                <li><a href="newcoupon.html">Coupon</a>
+                <li><a href="newsetting.html">Setting</a></li>
+                <li><a href="newwallet.html">Wallet</a></li>
+                <li><a href="home.html">Sign Out</a></li>
+                <li>
+                    <div class="time">
+                        <select> 
+                            <option>111 Ottawa Street, N5T 5J8</option>
+                            <option>133 Toronto Street, N5T 5J8</option>
+                            <option >421 Montreal Street, N5T 5J8</option>
+                        </select>
+                    </div>
+                 
+                </li>
+                <li>
+                    <div class="time">
+                        <select> 
+                            <option>English</option>
+                            <option>French</option>
+                            <option >简体中文</option>
+                        </select>
+                    </div>
+                </li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <script src="index.js"></script>
+
+        <div style="margin-top:64px; overflow:auto; margin:1% 20% 1% 20%;" id="order">
+            <header style="padding:8px;"></header>
+            <h2 style="text-align:center; margin:0% 0% 1% 0%">PROGRESS...</h2> 
+        </div>
+        <div id="map"></div>
+    <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:8,
+        center:{lat:45.4231,lng:-75.6831}
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+
+      var markers = [
+        {
+          coords:{lat:45.4231,lng:-75.6831},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>uOttawa</h1>'
+        }
+  
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0fWJomOniYqU2ts7iE8693eefsNLe5kQ&callback=initMap">
+  </script>
+ 
+
+            </div>
+            <div class="footer">
+                <div class="container1">
+                    <div class="row">
+                        <div class="footer-col-1">
+                            <h3>Download our app</h3>
+                            <p>Download App for Android and IOS phone.</p>
+                            <div class="appl-logo">
+                                <a href="#" class="btn"><i class="fa fa-apple" aria-hidden="true"></i> Apple Store </a>
+                                <a href="#" class="btn"><i class="fa fa-google" aria-hidden="true"></i> Google Play </a>
+                            </div>
+                        </div>
+                        <div class="footer-col-2">
+                            <h3>Contact Us</h3>
+                            <ul>
+                                <li>Call-Us:</li>
+                                <li><i class="fa fa-phone" aria-hidden="true"></i>+1 111-222-333</li>
+                                <li>E-mail:</li>
+                                <li><i class="fa fa-envelope" aria-hidden="true"></i>*abcd*@gmail.com</li>
+                            </ul>
+                            
+                        </div>
+                        <div class="footer-col-3">
+                            <h3>Follow Us</h3>
+                            <ul>
+                                <li><a href="#" class="social"><i class="fa fa-facebook-official" aria-hidden="true"></i>Facebook</a></li>
+                                <li><a href="#" class="social"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+                                <li><a href="#" class="social"><i class="fa fa-instagram" aria-hidden="true"></i> Instgram</a></li>
+                                <li><a href="#" class="social"><i class="fa fa-youtube-play" aria-hidden="true"></i> Youtube</a></li>
+                             </ul>
+                        </div>
+                    </div>
+                   <!--  <div class="copyright"></div>
+                <p>Copyright 2020-JAMZ</p> 
+                    </div>  -->
+                </div>
+            </div>
+            </div>
+            <!--add bar code-->
+        <div id="popup">
+            <h2>BARCODE</h2>
+            <img src="image/barcode.jpg" style="width: 250px;">
+            <a href="#" onclick="toggle()">Close</a>
+        </div>
+           
+
+            <script>
+                function toggle() {
+                    var blur = document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup = document.getElementById('popup');
+                    popup.classList.toggle('active');
+                }
+                </script>
+
+                
+
+        <script>
+        function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+        }
+        </script>
+
+    </body>
+</html>
