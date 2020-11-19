@@ -1,8 +1,9 @@
 <html>
     <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/user.css">
       <link rel="stylesheet" href="css/menu.css">
+      <link rel="stylesheet" href="css/style.css">
       <script src="https://kit.fontawesome.com/c4a00654b9.js" crossorigin="anonymous"></script>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
       <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -20,41 +21,64 @@
                                 <div class="line3"></div>
                             </div>
                     <div class = "logo">
-                        <h3>Jamz Delivery</h3>
+                        
+                        <h3><i class="fa fa-cutlery" aria-hidden="true"></i>Jamz Delivery</h3>
                     </div>
-                    <div class="login">
-                        <a href="login.html">Log in</a>
+                  
+                
+                
+                    <div class = "Cart">
+                        <a href="newcart.html" class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> </a>
                     </div>
+                    <div class = "logo2">
+                        <h3>Welcome Jack! <i class="fa fa-user-circle" aria-hidden="true"></i></h3>
+                    </div>
+                        <div class="burger2">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
                 </nav>
         </div>
-        <script>
-            function fadeOut(){
-                TweenMax.to(".myBtn",1,{
-                    y:-100,
-                    opacity:0
-                });
-
-                TweenMax.to(".screen",2,{
-                    y:-400,
-                    opacity:0,
-                    ease: Power2.easeInOut,
-                    delay:1
-                });
-                TweenMax.to(".overlay",2,{
-                    delay:1.5,
-                    top:"-100%",
-                    ease:Expo.easeInOut
-                });
-            }
-        </script>
         <div class="slidenav">
             <ul class="nav-links">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#" onclick="toggle()">BARCODE</a></li>
+                <li><a href="user.html" class="active">HOME</a></li>
+                <li><a href="neworder.html">ORDERS</a></li>
+                <li><a href="newprogress.html">PROGRESS</a>
+                <li><a href="Barcode.html" onclick="toggle()">BARCODE</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
+            </ul>
+        </div>
+        <div class="slidenav2">
+            <ul class="nav-links2">
+                <li><a href="#">Coupon</a>
+                <li><a href="newsetting.html">Setting</a></li>
+                <li><a href="#">Wallet</a></li>
+                <li><a href="home.html">Sign Out</a></li>
+                <li>
+                    <div class="time">
+                        <select> 
+                            <option>111 Ottawa Street, N5T 5J8</option>
+                            <option>133 Toronto Street, N5T 5J8</option>
+                            <option >421 Montreal Street, N5T 5J8</option>
+                        </select>
+                    </div>
+                 
+                </li>
+                <li>
+                    <div class="time">
+                        <select> 
+                            <option>English</option>
+                            <option>French</option>
+                            <option >简体中文</option>
+                        </select>
+                    </div>
+                </li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
             </ul>
         </div>
         <script src="index.js"></script>
@@ -71,62 +95,27 @@
                     </tr>
                 </table>
             </div>
-            
+           
             <div class="hometable">
                 <div class="offer">
                     <div class="small-container">
                         <div class="row">
                             <div class="col-2">
-                                <img src="image/popeyes pic 2.jpg" class="offer-img">
+                                <img src="image/kfc pic.jpg" class="offer-img">
                             </div>
                             <div class="col-2">
-                                <h1>Popeyes</h1>
-                                <small>Get one tender and another 50% off</small>
-                                <a href="Popeyes.html" class="btn">Enter restaurant  &#8594;</a>
+                                <h1></h1>
+                                <small>Most popular item: Family Combo, Only $49.99</small>
+                                <a href="#" class="btn">Add to cart  &#8594;</a>
                             </div>
                         </div>
                     </div>
                 </div>
                  <!-------------------feature product----------------->
                 <div class="small-container">
-                    <h2 class="title"> Recommended restaurants</h2>
+                    <h2 class="title"> Your KFC Menu</h2>
                     <div class = "row">
-                        <div class = "col-4">
-                            <img src = "image/kfc pic.jpg">
-                            <h4><a href="KFC.html">KFC</a></h4> 
-                            <p> Average Delivery Time: 35 mins </p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        <div class = "col-4">
-                            <img src = "image/logo mac.jpg">
-                            <h4><a href="McDonalds.html">McDonalds</a></h4> 
-                            <p> Average Delivery Time: 25 mins </p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        <div class = "col-4">
-                            <img src = "image/logo dominos.jpg">
-                            <h4><a href="Dominos.html">Dominos</a></h4>
-                            <p> Average Delivery Time: 20 min </p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
+                       
                         
                     </div>
                     
@@ -140,7 +129,7 @@
                 <div class="row">
                     <div class="footer-col-1">
                         <h3>Download our app</h3>
-                        <p>Download App for Android and IOS.</p>
+                        <p>Download App for Android and IOS phone.</p>
                         <div class="appl-logo">
                             <a href="#" class="btn"><i class="fa fa-apple" aria-hidden="true"></i> Apple Store </a>
                             <a href="#" class="btn"><i class="fa fa-google" aria-hidden="true"></i> Google Play </a>
@@ -171,18 +160,18 @@
                 </div>  -->
             </div>
         </div>
-            <div id="popup">
-                <h2>BARCODE</h2>
-                <img src="image/barcode.jpg" style="width: 250px;">
-                <a href="#" onclick="toggle()">Close</a>
-            </div>
-                <script>
-                    function toggle() {
-                        var blur = document.getElementById('blur');
-                        blur.classList.toggle('active');
-                        var popup = document.getElementById('popup');
-                        popup.classList.toggle('active');
-                    }
-                    </script>
+        <div id="popup">
+            <h2>BARCODE</h2>
+            <img src="image/barcode.jpg" style="width: 250px;">
+            <a href="#" onclick="toggle()">Close</a>
+        </div>
+            <script>
+                function toggle() {
+                    var blur = document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup = document.getElementById('popup');
+                    popup.classList.toggle('active');
+                }
+                </script>
     </body>
 </html>

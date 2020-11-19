@@ -24,12 +24,11 @@
                         
                         <h3><i class="fa fa-cutlery" aria-hidden="true"></i>Jamz Delivery</h3>
                     </div>
-                  
                 
-                
-                    <div class = "Cart">
-                        <a href="newcart.html" class="btn"><i class="fa fa-shopping-cart" aria-hidden="true"></i> </a>
-                    </div>
+                   <div class = "Cart">
+                    <h1> <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
+                        <!-- <a href="#" class="Cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> </a> -->
+                    </div> 
                     <div class = "logo2">
                         <h3>Welcome Jack! <i class="fa fa-user-circle" aria-hidden="true"></i></h3>
                     </div>
@@ -96,67 +95,58 @@
                 </table>
             </div>
            
-            <div class="hometable">
-                <div class="offer">
-                    <div class="small-container">
-                        <div class="row">
-                            <div class="col-2">
-                                <img src="image/popeyes pic 2.jpg" class="offer-img">
-                            </div>
-                            <div class="col-2">
-                                <h1>Popeyes</h1>
-                                <small>get one tender get another 50% off</small>
-                                <a href="Popeyes.html" class="btn">Enter restaurant  &#8594;</a>
-                            </div>
-                        </div>
-                    </div>
+           
+ <div class="hometable">
+    <div class="offer">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="image/popeyes pic 1.jpg" class="offer-img">
                 </div>
-                 <!-------------------feature product----------------->
-                <div class="small-container">
-                    <h2 class="title"> Recommend restaurant</h2>
-                    <div class = "row">
-                        <div class = "col-4">
-                            <img src = "image/kfc pic.jpg">
-                            <h4><a href="KFC.html">KFC</a></h4> 
-                            <p> Average Delivery Time: 35 mins </p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        <div class = "col-4">
-                            <img src = "image/logo mac.jpg">
-                            <h4><a href="McDonalds.html">McDonalds</a></h4> 
-                            <p> Average Delivery Time: 25 mins </p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        <div class = "col-4">
-                            <img src = "image/logo dominos.jpg">
-                            <h4><a href="Dominos.html">Dominos</a></h4>
-                            <p> Average Delivery Time: 20 min </p>
-                            <div class="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    
+                <div class="col-2">
+                    <h1></h1>
+                    <small>Most popular item: Chrismas Party Comno, Only $49.99</small>
+                    <a href="#" class="btn">Add to cart  &#8594;</a>
                 </div>
             </div>
+        </div>
+    </div>
+     <!-------------------feature product----------------->
+    <div class="small-container">
+        <h2 class="title"> Your Popeyes Menu</h2>
+        <div class = "row">
+           <!------shopping cart--------->
+
+            <section>
+                <div>
+                    <img src = "image/mac pic 1.jpg">
+                    <h6> $ 22</h6>
+                    <span></span>
+                    <button> add- cart</button>
+                </div>
+                <div>
+                    <img src = "image/mac pic 1.jpg">
+                    <h6> $ 22</h6>
+                    <span></span>
+                    <button> add- cart</button>
+                </div>
+                <div>
+                    <img src = "image/mac pic 1.jpg">
+                    <h6> $ 22</h6>
+                    <span></span>
+                    <button> add- cart</button>
+                </div>
+            
+            </section>
+            <div class="select">
+
             </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+             
 
         <!-----------footer------------>
         <div class="footer">
@@ -208,5 +198,23 @@
                     popup.classList.toggle('active');
                 }
                 </script>
+
+
+
     </body>
 </html>
+
+<script type ="text/javascript">
+var noti = document.querySelector('h1');
+var selcet = document.querySelector('.select');
+var button = d0cument.getelementbytagname("button");
+for(but of button)
+{
+but.addEventListener("click",(e)=>{
+    var add = Number(noti.getAttribute('data-count'||0));
+    noti.setAttribute('data-count',add +1);
+    noti.classList.add('zero')
+})
+
+}
+</script>
