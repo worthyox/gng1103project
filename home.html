@@ -50,9 +50,9 @@
         <div class="slidenav">
             <ul class="nav-links">
                 <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#" onclick="toggle()">BARCODE</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">ABOUT US</a></li>
+                <!-- <li><a href="#" onclick="toggle()">BARCODE</a></li> -->
+                <li><a href="#" onclick="toggle()">FAQ</a></li>
+                <li><a href="#" onclick="toggle2()">ABOUT US</a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
@@ -90,7 +90,7 @@
                 </div>
                  <!-------------------feature product----------------->
                 <div class="small-container">
-                    <h2 class="title"> Recommended restaurants</h2>
+                    <h2 class="title"> Recommended Restaurants</h2>
                     <div class = "row">
                         <div class = "col-4">
                             <img src = "image/kfc pic.jpg">
@@ -172,18 +172,32 @@
                 </div>  -->
             </div>
         </div>
-            <div id="popup">
-                <h2>BARCODE</h2>
-                <img src="image/barcode.jpg" style="width: 250px;">
-                <a href="#" onclick="toggle()">Close</a>
-            </div>
-                <script>
-                    function toggle() {
-                        var blur = document.getElementById('blur');
-                        blur.classList.toggle('active');
-                        var popup = document.getElementById('popup');
-                        popup.classList.toggle('active');
-                    }
-                    </script>
+        <div id="popup">
+            <h2>FAQ</h2>
+            <img src="image/faq.jpg" style="width: 1000px; height:700px">
+            <a href="#" onclick="toggle()">Close</a>
+        </div>
+            <script>
+                function toggle() {
+                    var blur = document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup = document.getElementById('popup');
+                    popup.classList.toggle('active');
+                }
+                </script>
+                
+        <div id="popup2">
+            <h2>FAQ</h2>
+            <img src="image/about us.jpg" style="width: 1000px; height:700px">
+            <a href="#" onclick="toggle2()">Close</a>
+        </div>
+            <script>
+                function toggle2() {
+                    var blur = document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup2 = document.getElementById('popup2');
+                    popup2.classList.toggle('active');
+                }
+                </script>
     </body>
 </html>
