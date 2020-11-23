@@ -108,19 +108,38 @@
                 <div class="col-2">
                     <h1></h1>
                     <small>Most popular item: Party selection, Only $34.99</small>
-                    <a href="#" class="btn">Add to cart  &#8594;</a>
+                    <a href="#" class="btn" onclick="toggle7()">Add to cart  &#8594;</a>
                 </div>
             </div>
         </div>
     </div>
      <!-------------------feature product----------------->
-    <div class="small-container">
-        <h2 class="title"> Your Dominos Menu</h2>
-        <div class = "row">
-           
-            
+     <div class="small-container">
+        <h2 class="title"> Your Popeyes Menu</h2>
+        <div class = "col-5">
+            <h1>4 tender combo</h1>
+            <img src="image/popeyes pic 1.jpg" class="offer-img">
+            <small>sahduihfuafbn dhfsauidfhaf</small> 
+            <a href="#" class="btn" onclick="toggle3()">see more detail  &#8594;</a>
         </div>
-        
+        <div class = "col-5">
+            <h1>4 tender combo</h1>
+            <img src="image/popeyes pic 1.jpg" class="offer-img">
+            <small>sahduihfuafbn dhfsauidfhaf</small> 
+            <a href="#" class="btn" onclick="toggle4()">see more detail  &#8594;</a>
+        </div>
+        <div class = "col-5">
+            <h1>4 tender combo</h1>
+            <img src="image/popeyes pic 1.jpg" class="offer-img">
+            <small>sahduihfuafbn dhfsauidfhaf</small> 
+            <a href="#" class="btn" onclick="toggle5()">see more detail  &#8594;</a>
+        </div>
+        <div class = "col-5">
+            <h1>4 tender combo</h1>
+            <img src="image/popeyes pic 1.jpg" class="offer-img">
+            <small>sahduihfuafbn dhfsauidfhaf</small> 
+            <a href="#" class="btn"onclick="toggle6()">see more detail  &#8594;</a>
+        </div>
     </div>
 </div>
 </div>
@@ -177,7 +196,7 @@
                 </script>
                 
         <div id="popup2">
-            <h2>FAQ</h2>
+            <h2>ABOUT US</h2>
             <img src="image/about us.jpg" style="width: 1000px; height:700px">
             <a href="#" onclick="toggle2()">Close</a>
         </div>
@@ -190,51 +209,356 @@
                 }
                 </script>
 
-<div id="popup3">
-    <h2>4 tendor combo custmize</h2>
-    <!-----radio button-->
-    <p>dipping souce</p>
-    <label for ="myRadioId" class="radio">
-        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
-        <div class ="radio__radio"></div>
-        BBQ(default)
-    </label>
-    <label for ="myRadioId" class="radio">
-        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
-        <div class ="radio__radio"></div>
-        Bufflo
-    </label>
-    <label for ="myRadioId" class="radio">
-        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
-        <div class ="radio__radio"></div>
-        Honey Mustard
-    </label>
 
-    <p>Drink</p>
-    <label for ="myRadioId" class="radio">
-        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
-        <div class ="radio__radio"></div>
-        Coke(default)
-    </label>
-    <label for ="myRadioId" class="radio">
-        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
-        <div class ="radio__radio"></div>
-        Ice tea
-    </label>
-    <label for ="myRadioId" class="radio">
-        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
-        <div class ="radio__radio"></div>
-        Fanta
-    </label>
-    <a href="#" onclick="toggle3()">add to cart</a>
-</div>
-    <script>
-        function toggle3() {
-            var blur = document.getElementById('blur');
-            blur.classList.toggle('active');
-            var popup3 = document.getElementById('popup3');
-            popup3.classList.toggle('active');
-        }
-        </script>
+        <!------------menu-->
+
+                <!---------first------------>
+                <div id="popup3">
+                    <div class = form-box>
+                    <h2>4 tendor combo custmize</h2>
+                    <!-----radio button-->
+                    <p>dipping souce</p>
+                    <label>
+                        <input type="radio" name = "myRadioField1">
+                        <div class ="circle"></div>
+                        <span>BBQ(default)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField1">
+                        <div class ="circle"></div>
+                        <span>Bufflo</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField1">
+                        <div class ="circle"></div>
+                        <span>Honey Mustard</span>
+                    </label>
+                </div>
+                <div class = form-box2>
+                    <p>Drink</p>
+                    <label>
+                        <input type="radio" name = "myRadioField2">
+                        <div class ="circle2"></div>
+                        <span>Coke(default)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField2">
+                        <div class ="circle2"></div>
+                        <span>Ice Tea</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField2">
+                        <div class ="circle2"></div>
+                        <span>Fanta</span>
+                    </label>
+                </div>
+                <div class = form-box3>
+                    <p>Add-on</p>
+                    <label>
+                        <input type="radio" name = "myRadioField3">
+                        <div class ="circle3"></div>
+                        <span>Drink Size Up +$0.99</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField3">
+                        <div class ="circle3"></div>
+                        <span>Add one dipping souce +0.49</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField3">
+                        <div class ="circle3"></div>
+                        <span>Mid Size Fries +$2.99</span>
+                    </label>
+                </div>
+                    <a href="#" onclick="toggle3()">Add to Cart</a>
+                    <a href="#" onclick="toggle3()">Go Back</a>
+                </div>
+                    <script>
+                        function toggle3() {
+                            var blur = document.getElementById('blur');
+                            blur.classList.toggle('active');
+                            var popup3 = document.getElementById('popup3');
+                            popup3.classList.toggle('active');
+                        }
+                        </script>
+                 <!---------Second------------>
+                 <div id="popup3">
+                    <div class = form-box>
+                    <h2>4 tendor combo custmize</h2>
+                    <!-----radio button-->
+                    <p>dipping souce</p>
+                    <label>
+                        <input type="radio" name = "myRadioField1">
+                        <div class ="circle"></div>
+                        <span>BBQ(default)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField1">
+                        <div class ="circle"></div>
+                        <span>Bufflo</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField1">
+                        <div class ="circle"></div>
+                        <span>Honey Mustard</span>
+                    </label>
+                </div>
+                <div class = form-box2>
+                    <p>Drink</p>
+                    <label>
+                        <input type="radio" name = "myRadioField2">
+                        <div class ="circle2"></div>
+                        <span>Coke(default)</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField2">
+                        <div class ="circle2"></div>
+                        <span>Ice Tea</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField2">
+                        <div class ="circle2"></div>
+                        <span>Fanta</span>
+                    </label>
+                </div>
+                <div class = form-box3>
+                    <p>Add-on</p>
+                    <label>
+                        <input type="radio" name = "myRadioField3">
+                        <div class ="circle3"></div>
+                        <span>Drink Size Up +$0.99</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField3">
+                        <div class ="circle3"></div>
+                        <span>Add one dipping souce +0.49</span>
+                    </label>
+                    <label>
+                        <input type="radio" name = "myRadioField3">
+                        <div class ="circle3"></div>
+                        <span>Mid Size Fries +$2.99</span>
+                    </label>
+                </div>
+                    <a href="#" onclick="toggle4()">Add to Cart</a>
+                    <a href="#" onclick="toggle4()">Go Back</a>
+                </div>
+                    <script>
+                        function toggle4() {
+                            var blur = document.getElementById('blur');
+                            blur.classList.toggle('active');
+                            var popup3 = document.getElementById('popup3');
+                            popup3.classList.toggle('active');
+                        }
+                        </script>
+            <!---------third------------>
+            <div id="popup3">
+                <div class = form-box>
+                <h2>4 tendor combo custmize</h2>
+                <!-----radio button-->
+                <p>dipping souce</p>
+                <label>
+                    <input type="radio" name = "myRadioField1">
+                    <div class ="circle"></div>
+                    <span>BBQ(default)</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField1">
+                    <div class ="circle"></div>
+                    <span>Bufflo</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField1">
+                    <div class ="circle"></div>
+                    <span>Honey Mustard</span>
+                </label>
+            </div>
+            <div class = form-box2>
+                <p>Drink</p>
+                <label>
+                    <input type="radio" name = "myRadioField2">
+                    <div class ="circle2"></div>
+                    <span>Coke(default)</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField2">
+                    <div class ="circle2"></div>
+                    <span>Ice Tea</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField2">
+                    <div class ="circle2"></div>
+                    <span>Fanta</span>
+                </label>
+            </div>
+            <div class = form-box3>
+                <p>Add-on</p>
+                <label>
+                    <input type="radio" name = "myRadioField3">
+                    <div class ="circle3"></div>
+                    <span>Drink Size Up +$0.99</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField3">
+                    <div class ="circle3"></div>
+                    <span>Add one dipping souce +0.49</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField3">
+                    <div class ="circle3"></div>
+                    <span>Mid Size Fries +$2.99</span>
+                </label>
+            </div>
+                <a href="#" onclick="toggle5()">Add to Cart</a>
+                <a href="#" onclick="toggle5()">Go Back</a>
+            </div>
+                <script>
+                    function toggle5() {
+                        var blur = document.getElementById('blur');
+                        blur.classList.toggle('active');
+                        var popup3 = document.getElementById('popup3');
+                        popup3.classList.toggle('active');
+                    }
+                    </script>
+                     <!---------fourth------------>
+            <div id="popup3">
+                <div class = form-box>
+                <h2>4 tendor combo custmize</h2>
+                <!-----radio button-->
+                <p>dipping souce</p>
+                <label>
+                    <input type="radio" name = "myRadioField1">
+                    <div class ="circle"></div>
+                    <span>BBQ(default)</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField1">
+                    <div class ="circle"></div>
+                    <span>Bufflo</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField1">
+                    <div class ="circle"></div>
+                    <span>Honey Mustard</span>
+                </label>
+            </div>
+            <div class = form-box2>
+                <p>Drink</p>
+                <label>
+                    <input type="radio" name = "myRadioField2">
+                    <div class ="circle2"></div>
+                    <span>Coke(default)</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField2">
+                    <div class ="circle2"></div>
+                    <span>Ice Tea</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField2">
+                    <div class ="circle2"></div>
+                    <span>Fanta</span>
+                </label>
+            </div>
+            <div class = form-box3>
+                <p>Add-on</p>
+                <label>
+                    <input type="radio" name = "myRadioField3">
+                    <div class ="circle3"></div>
+                    <span>Drink Size Up +$0.99</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField3">
+                    <div class ="circle3"></div>
+                    <span>Add one dipping souce +0.49</span>
+                </label>
+                <label>
+                    <input type="radio" name = "myRadioField3">
+                    <div class ="circle3"></div>
+                    <span>Mid Size Fries +$2.99</span>
+                </label>
+            </div>
+                <a href="#" onclick="toggle6()">Add to Cart</a>
+                <a href="#" onclick="toggle6()">Go Back</a>
+            </div>
+                <script>
+                    function toggle6() {
+                        var blur = document.getElementById('blur');
+                        blur.classList.toggle('active');
+                        var popup3 = document.getElementById('popup3');
+                        popup3.classList.toggle('active');
+                    }
+                    </script>
+        
+        <!---------fifth------------>
+        <div id="popup3">
+            <div class = form-box>
+            <h2>4 tendor combo custmize</h2>
+            <!-----radio button-->
+            <p>dipping souce</p>
+            <label>
+                <input type="radio" name = "myRadioField1">
+                <div class ="circle"></div>
+                <span>BBQ(default)</span>
+            </label>
+            <label>
+                <input type="radio" name = "myRadioField1">
+                <div class ="circle"></div>
+                <span>Bufflo</span>
+            </label>
+            <label>
+                <input type="radio" name = "myRadioField1">
+                <div class ="circle"></div>
+                <span>Honey Mustard</span>
+            </label>
+        </div>
+        <div class = form-box2>
+            <p>Drink</p>
+            <label>
+                <input type="radio" name = "myRadioField2">
+                <div class ="circle2"></div>
+                <span>Coke(default)</span>
+            </label>
+            <label>
+                <input type="radio" name = "myRadioField2">
+                <div class ="circle2"></div>
+                <span>Ice Tea</span>
+            </label>
+            <label>
+                <input type="radio" name = "myRadioField2">
+                <div class ="circle2"></div>
+                <span>Fanta</span>
+            </label>
+        </div>
+        <div class = form-box3>
+            <p>Add-on</p>
+            <label>
+                <input type="radio" name = "myRadioField3">
+                <div class ="circle3"></div>
+                <span>Drink Size Up +$0.99</span>
+            </label>
+            <label>
+                <input type="radio" name = "myRadioField3">
+                <div class ="circle3"></div>
+                <span>Add one dipping souce +0.49</span>
+            </label>
+            <label>
+                <input type="radio" name = "myRadioField3">
+                <div class ="circle3"></div>
+                <span>Mid Size Fries +$2.99</span>
+            </label>
+        </div>
+            <a href="#" onclick="toggle7()">Add to Cart</a>
+            <a href="#" onclick="toggle7()">Go Back</a>
+        </div>
+            <script>
+                function toggle7() {
+                    var blur = document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup3 = document.getElementById('popup3');
+                    popup3.classList.toggle('active');
+                }
+                </script>
+        
+        
     </body>
 </html>
