@@ -192,5 +192,52 @@
                     popup2.classList.toggle('active');
                 }
                 </script>
+
+<div id="popup3">
+    <h2>4 tendor combo custmize</h2>
+    <!-----radio button-->
+    <p>dipping souce</p>
+    <label for ="myRadioId" class="radio">
+        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
+        <div class ="radio__radio"></div>
+        BBQ(default)
+    </label>
+    <label for ="myRadioId" class="radio">
+        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
+        <div class ="radio__radio"></div>
+        Bufflo
+    </label>
+    <label for ="myRadioId" class="radio">
+        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
+        <div class ="radio__radio"></div>
+        Honey Mustard
+    </label>
+
+    <p>Drink</p>
+    <label for ="myRadioId" class="radio">
+        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
+        <div class ="radio__radio"></div>
+        Coke(default)
+    </label>
+    <label for ="myRadioId" class="radio">
+        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
+        <div class ="radio__radio"></div>
+        Ice tea
+    </label>
+    <label for ="myRadioId" class="radio">
+        <input type="radio" name = "myRadioField" id ="myRadioId" class="radio__input">
+        <div class ="radio__radio"></div>
+        Fanta
+    </label>
+    <a href="#" onclick="toggle3()">add to cart</a>
+</div>
+    <script>
+        function toggle3() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup3 = document.getElementById('popup3');
+            popup3.classList.toggle('active');
+        }
+        </script>
     </body>
 </html>
