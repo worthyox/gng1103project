@@ -328,6 +328,13 @@ nav{
 .col-4 img{
     width: 70%;
 }
+
+.col-5{
+    width: 100%;
+    height: 20%;
+    display: inline;
+}
+
 .title{
     text-align: center;
     margin: 0 auto 80px;
@@ -448,6 +455,43 @@ small{
     justify-content: center;
     align-items:center;
   }
+  .hometable2 {
+    display: block;
+    margin-left:20% ;
+    /* padding: 2% 5% 5% 5%; */
+    text-align: center;
+    overflow: auto;
+    background: #807d7d;
+    width: 60%;
+    height: 87%;
+    justify-content: center;
+    align-items:center;
+  }
+
+.description{
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+.description h1,p{
+    margin: 0;
+}
+
+.description2{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    display: inline;
+    justify-content: center;
+}
+
+.description p{
+    margin: 0;
+}
+
+
 .h1{
     width:3%;
     position:relative;
@@ -503,6 +547,7 @@ h6{
     font-size:15px;
 
 }
+
 button{
     padding:5px;
     background:red;
@@ -512,65 +557,7 @@ button{
     color:#fafafa;
     cursor:pointer;
 }
-section div span{
-    position:absolute;
-    top:14px;
-    left:13px;
-    width:300px;
-    height:186px;
-    display:none;
-}
-section div span img{
-    width:100%;
-    height:100%;
-}
-  .select{
-      width:60%;
-      height:580px;
-      background: #222;
-      position: absolute;
-      top:-1000px;
-      left:20%;
-      transition:0.5s;
-      overflow-y:auto;;
-      margin:auto;
 
-  }
-  .select div{
-      width :100%;
-      height:200px;
-      display:flex;
-      padding: 5px;
-      border:1px solid white;
-      position: relative;
-      margin:5px auto;
-  }
-  .select div img{
-      width: 300px;
-      height:100%;
-  }
-  .select div p{
-      padding: 35px;
-      color:white;
-  }
-.select div h6,
-.select div button{
-    position:absolute;
-    left:45%;
-    top:50%;
-    color:white;
-}
-
-.select div button{
-    left:60%;
-    top:55%;
-}
-.select div span{
-    display:none;
-}
-h1.zero:before{
-    opacity:1;
-}
 #popup{
     text-align: center;
     position: fixed;
