@@ -467,7 +467,12 @@ small{
     justify-content: center;
     align-items:center;
   }
-
+.result{
+    height:30%;
+    margin-top:2%;
+    margin-left:5%;
+    
+}
 .description{
     width: 50%;
     height: 100%;
