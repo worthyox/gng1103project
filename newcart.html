@@ -82,7 +82,7 @@ label {
   background-color: #337ab7;
   color: white;
   padding: 12px;
-  margin: 10px 0;
+  margin: 10px;
   border: none;
   width: 100%;
   border-radius: 3px;
@@ -105,6 +105,17 @@ hr {
 span.price {
   float: right;
   color: grey;
+}
+
+span.item {
+  margin: 150px;
+  float: center;
+  color: #002699;
+}
+
+span.n-of-item {
+  float: center;
+  color: #002699;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
@@ -241,16 +252,16 @@ span.price {
                 <li><a href="user.html" class="active">HOME</a></li>
                 <li><a href="neworder.html">ORDERS</a></li>
                 <li><a href="newprogress.html">PROGRESS</a>
-               <!--  <li><a href="#" onclick="toggle()">BARCODE</a></li> -->
-               <li><a href="#" onclick="toggle()">FAQ</a></li>
-                <li><a href="#" onclick="toggle2()">ABOUT US</a></li>
+                <li><a href="#" onclick="toggle()">BARCODE</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">ABOUT US</a></li>
                 <li><a href="#"></a></li>
                 <li><a href="#"></a></li>
             </ul>
         </div>
         <div class="slidenav2">
             <ul class="nav-links2">
-                <!-- <li><a href="newcoupon.html">Coupon</a> -->
+                <li><a href="newcoupon.html">Coupon</a>
                 <li><a href="newsetting.html">Setting</a></li>
                 <li><a href="newwallet.html">Wallet</a></li>
                 <li><a href="home.html">Sign Out</a></li>
@@ -298,15 +309,18 @@ span.price {
     <div class="col-25">
       <div class="wallet-container"><br>
       <h3 id="Cart">Shopping Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h3>
-      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <p><a href="#">Product 1</a> <span class="item">Number of Items</span><span class="n-of-item">3</span><span class="price">$15</span></p>
+      <p><a href="#">Product 2</a> <span class="item">Number of Items</span><span class="n-of-item">1</span><span class="price">$5</span></p>
+      <p><a href="#">Product 3</a> <span class="item">Number of Items</span><span class="n-of-item">2</span><span class="price">$8</span></p>
+      <p><a href="#">Product 4</a> <span class="item">Number of Items</span><span class="n-of-item">1</span><span class="price">$2</span></p><br>
       <hr>
       <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
       </div>
     </div>
 </div> 
+
+  <!---   <input type="submit" value="Continue to checkout" class="wallet-btn" style="margin-top: 20px;"> -->
+          <a href="newwallet.html"><input type="submit" value="Continue to checkout" class="wallet-btn" style="margin-top: 20px;"></a>
             </div>
            
             
@@ -412,33 +426,21 @@ span.price {
             </div>
             </div>
             <!--add bar code-->
-            <div id="popup">
-              <h2>FAQ</h2>
-              <img src="image/faq.jpg" style="width: 1000px; height:700px">
-              <a href="#" onclick="toggle()">Close</a>
-          </div>
-              <script>
-                  function toggle() {
-                      var blur = document.getElementById('blur');
-                      blur.classList.toggle('active');
-                      var popup = document.getElementById('popup');
-                      popup.classList.toggle('active');
-                  }
-                  </script>
-                  
-          <div id="popup2">
-            <h2>ABOUT US</h2>
-              <img src="image/about us.jpg" style="width: 1000px; height:700px">
-              <a href="#" onclick="toggle2()">Close</a>
-          </div>
-              <script>
-                  function toggle2() {
-                      var blur = document.getElementById('blur');
-                      blur.classList.toggle('active');
-                      var popup2 = document.getElementById('popup2');
-                      popup2.classList.toggle('active');
-                  }
-                  </script>
+        <div id="popup">
+            <h2>BARCODE</h2>
+            <img src="image/barcode.jpg" style="width: 250px;">
+            <a href="#" onclick="toggle()">Close</a>
+        </div>
+           
+
+            <script>
+                function toggle() {
+                    var blur = document.getElementById('blur');
+                    blur.classList.toggle('active');
+                    var popup = document.getElementById('popup');
+                    popup.classList.toggle('active');
+                }
+                </script>
 
                 
 
@@ -447,8 +449,8 @@ span.price {
         document.getElementById("myDropdown").classList.toggle("show");
         }
         </script>
-        
+
         <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '050f4312-904b-449a-84a3-93c030074850', f: true }); done = true; } }; })();</script>    
-   
-      </body>
+
+    </body>
 </html>
