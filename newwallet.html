@@ -304,7 +304,7 @@ span.n-of-item {
                 <li><a href="user.html" class="active">HOME</a></li>
                 <li><a href="neworder.html">ORDERS</a></li>
                 <li><a href="newprogress.html">PROGRESS</a>
-                <li><a href="#" onclick="toggle()">BARCODE</a></li>
+                <!--<li><a href="#" onclick="toggle()">BARCODE</a></li> -->
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="#"></a></li>
@@ -313,7 +313,7 @@ span.n-of-item {
         </div>
         <div class="slidenav2">
             <ul class="nav-links2">
-                <li><a href="newcoupon.html">Coupon</a>
+                <!-- <li><a href="newcoupon.html">Coupon</a> -->
                 <li><a href="newsetting.html">Setting</a></li>
                 <li><a href="newwallet.html">Wallet</a></li>
                 <li><a href="home.html">Sign Out</a></li>
@@ -393,7 +393,7 @@ span.n-of-item {
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
-        <input type="submit" value="Checkout Now" class="wallet-btn">
+        <a href="#" onclick="toggle()" class="wallet-btn">Checkout Now! </a>
       </form>
     </div>
   </div>
@@ -518,8 +518,11 @@ span.n-of-item {
             </div>
             <!--add bar code-->
         <div id="popup">
-            <h2>BARCODE</h2>
-            <img src="image/barcode.jpg" style="width: 250px;">
+            <h2>Confirmation Page</h2>
+            <h2>Dear Mr. Jack</h2>
+            <p>Your order number is #233333, and the estimate delivered time is 19:37 to 111 Ottawa Street</p>
+            <img src="image/barcode.jpg" style="width: 350px; height:350px">
+            <p>Download this Barcode and scan it on drone (each barcode is unique, please prepare the correct Barcode)</p>
             <a href="#" onclick="toggle()">Close</a>
         </div>
            
