@@ -68,11 +68,11 @@
   font-family: Arial;
   font-size: 17px;
   padding: 8px;
-} 
+}
 
 * {
   box-sizing: border-box;
-} */
+}
 
 .wallet-row {
   display: -ms-flexbox; /* IE10 */
@@ -81,6 +81,7 @@
   flex-wrap: wrap;
   margin: 0 -16px;
 }
+
 
 .col-25 {
   -ms-flex: 25%; /* IE10 */
@@ -105,7 +106,7 @@
 
 .wallet-container {
   background-color: rgba(235, 250, 235, 0.0);
-  padding: 10px 20px 15px 20px;
+  padding: 10px 0px 15px 0px;
   border: 0px solid lightgrey;
   border-radius: 3px;
 }
@@ -169,14 +170,17 @@ span.n-of-item {
   color: #002699;
 }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
-@media (max-width: 800px) {
-  .wallet-row {
-    flex-direction: column-reverse;
-  }
-  /* .col-25 {
+/* Responsive layout - when the screen is less than 800px wide, 
+make the two columns stack on top of each other instead of next to each other 
+(also change the direction - make the "cart" column go on top) */
+
+  @media (max-width: 100px) {
+    .wallet-row {
+    flex-direction: column-reverse; 
+    }
+    .col-25 {
     margin-bottom: 20px;
-  } */
+    }
 }
 
         /* body,h1,h3,h4,h5,h6 {font-family: Arial, sans-serif} */
@@ -278,7 +282,7 @@ span.n-of-item {
                                 <div class="line1"></div>
                                 <div class="line2"></div>
                                 <div class="line3"></div>
-                            </div>
+                    </div>
                     <div class = "logo">
                         
                         <h3><i class="fa fa-cutlery" aria-hidden="true"></i>Jamz Delivery</h3>
@@ -304,7 +308,7 @@ span.n-of-item {
                 <li><a href="user.html" class="active">HOME</a></li>
                 <li><a href="neworder.html">ORDERS</a></li>
                 <li><a href="newprogress.html">PROGRESS</a>
-                <!--<li><a href="#" onclick="toggle()">BARCODE</a></li> -->
+                <li><a href="#" onclick="toggle()">BARCODE</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="#"></a></li>
@@ -313,7 +317,7 @@ span.n-of-item {
         </div>
         <div class="slidenav2">
             <ul class="nav-links2">
-                <!-- <li><a href="newcoupon.html">Coupon</a> -->
+                <li><a href="newcoupon.html">Coupon</a>
                 <li><a href="newsetting.html">Setting</a></li>
                 <li><a href="newwallet.html">Wallet</a></li>
                 <li><a href="home.html">Sign Out</a></li>
@@ -351,20 +355,60 @@ span.n-of-item {
             
 <div style="overflow:auto; border:5px solid #1f7a1f; margin:0% 20% 0% 20%;" id="ordermenu">
              
-
+<div id="COUPON" class="tabcontent">
+<div class="coupon">
+  <div class="coupon-container">
+    <h3>Company Logo</h3>
+  </div>
+  <img src="/w3images/hamburger.jpg" alt="Avatar" style="width:100%;">
+  <div class="coupon-container" style="background-color:white">
+    <h2><b>20% OFF YOUR PURCHASE</b></h2> 
+    <p>Above you'll find some of the best coupons, discounts and promotion codes 
+    as ranked by the users of RetailMeNot.com. To use a coupon simply click the coupon code 
+    then enter the code during the store's checkout process.
+    Today's Top Text Offers:.</p>
+  </div>
+  <div class="coupon-container">
+    <p>Use Promo Code: <span class="promo">BOH232</span></p>
+    <p class="expire">Expires: Jan 03, 2021</p>
+    <input type="submit" value="Enter Promo Code" class="btn-setting btn-primary" style="margin-top:10px;"> 
+  </div>
+</div>
+</div>
 
 <div id="PAYMENT" class="tabcontent">
 
-<div class="wallet-row">
+<div class="row">
   <div class="col-75">
     <div class="wallet-container">
       <form action="/action_page.php">
-
-        
-     
-        <div class="wallet-row">
+      
+        <div class="row">
           <div class="col-50">
-            <h3 id="Payment">Payment</h3>
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
             <label for="fname">Accepted Cards</label>
             <div class="icon-container">
               <i class="fa fa-cc-visa" style="color:navy;"></i>
@@ -378,7 +422,7 @@ span.n-of-item {
             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
             <label for="expmonth">Exp Month</label>
             <input type="text" id="expmonth" name="expmonth" placeholder="September">
-            <div class="wallet-row">
+            <div class="row">
               <div class="col-50">
                 <label for="expyear">Exp Year</label>
                 <input type="text" id="expyear" name="expyear" placeholder="2018">
@@ -389,17 +433,20 @@ span.n-of-item {
               </div>
             </div>
           </div>
-          
+
+        </div> 
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
         </label>
-        <a href="#" onclick="toggle()" class="wallet-btn">Checkout Now! </a>
+        <input type="submit" value="checkout Now" class="wallet-btn">
       </form>
     </div>
   </div>
+ </div>
 
-    <div class="col-25">
-      <div class="wallet-container"><br>
+ <div class="wallet-row"> 
+  <div class="col-25">
+    <div class="wallet-container">
       <h3 id="Cart">My Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h3>
       <p><a href="#">Product 1</a> <span class="item">Number of Items</span><span class="n-of-item">3</span><span class="price">$15</span></p>
       <p><a href="#">Product 2</a> <span class="item">Number of Items</span><span class="n-of-item">1</span><span class="price">$5</span></p>
@@ -407,23 +454,13 @@ span.n-of-item {
       <p><a href="#">Product 4</a> <span class="item">Number of Items</span><span class="n-of-item">1</span><span class="price">$2</span></p><br>
      <hr>
       <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
-      </div>
     </div>
-
-</div> 
+  </div>
 </div>
 </div>
 
 </div>
-
-           
-
-            
-            
-            <!-- <div style="position:fixed; bottom: 0px; left:0px; right:0px; background-color: white;"id="about">
-            <h3 style="margin-bottom:10px; text-align:center;">ABOUT US</h3>
-            <p style="background-color: white; text-align:center; padding-left:10px; padding-right:10px;">JAMZ DELIVERY is a drone delivery solution developed by uOttawa Mechanical Engineering Students. Find us at some address at some place or call us at 05050515-122330</p>
-            </div> -->
+</div>
 
           
           <script>
@@ -477,8 +514,6 @@ span.n-of-item {
             }
             </script>
 
-           </div>
-            </div>
             <div class="footer">
                 <div class="container1">
                     <div class="row">
@@ -510,21 +545,14 @@ span.n-of-item {
                              </ul>
                         </div>
                     </div>
-                   <!--  <div class="copyright"></div>
-                <p>Copyright 2020-JAMZ</p> 
-                    </div>  -->
                 </div>
             </div>
-            </div>
+        
             <!--add bar code-->
         <div id="popup">
-            <h2>Confirmation Page</h2>
-            <h2>Dear Mr. Jack</h2>
-            <p>Your order number is #233333, and the estimate delivered time is 19:37 to 111 Ottawa Street</p>
-            <img src="image/barcode.jpg" style="width: 350px; height:350px">
-            <p>Download this Barcode and scan it on drone (each barcode is unique, please prepare the correct Barcode)</p>
-            <a href="#" onclick="toggle()">download the barcode</a>
-            <a href="#" onclick="toggle()">send to jack123@qq.com</a>
+            <h2>BARCODE</h2>
+            <img src="image/barcode.jpg" style="width: 250px;">
+            <a href="#" onclick="toggle()">Close</a>
         </div>
            
 
@@ -544,8 +572,6 @@ span.n-of-item {
         document.getElementById("myDropdown").classList.toggle("show");
         }
         </script>
-
-      <script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: '050f4312-904b-449a-84a3-93c030074850', f: true }); done = true; } }; })();</script>    
 
     </body>
 </html>
