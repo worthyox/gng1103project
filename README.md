@@ -1,2 +1,2 @@
-# Web develop for Jamz
-project file for GNG1103
+# Web development for Jamz
+Project file for GNG1103
